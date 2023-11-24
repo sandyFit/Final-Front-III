@@ -4,7 +4,12 @@ import { ContextGlobal }  from '../utils/global.context'
 import {showAlert} from '../utils/showAlert'
 
 const Home = () => {
-    const { allDentist, error, getAllDentist } = useContext(ContextGlobal)
+    const {
+        allDentist,
+        error,
+        getAllDentist,
+        theme
+    } = useContext(ContextGlobal)
 
     useEffect(() => {
 
@@ -18,7 +23,7 @@ const Home = () => {
 
 
     return (
-        <main className="">
+        <main className={theme === 'dark' ? 'dark' : ''}>
             <h1>Home</h1>   
             
             <div className='card-grid'>
@@ -31,4 +36,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default Home

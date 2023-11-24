@@ -1,8 +1,8 @@
 import { createContext, useEffect, useMemo, useState } from "react"
 import axios from "axios"
 
-export const initialState = { theme: "", data: [] }
-export const ContextGlobal = createContext()
+export const initialState = { theme: "light", data: [] }
+export const ContextGlobal = createContext(undefined)
 
 const BASE_URL = 'https://jsonplaceholder.typicode.com/users'
 
@@ -11,6 +11,7 @@ export const ContextProvider = ({ children }) => {
     const [allDentist, setAllDentist] = useState([])
     const [dentist, setDentist] = useState({})
     const [error, setError] = useState('')
+    const [theme, setTheme] = useState(initialState.theme)
 
     const getAllDentist = async () => {
         try {
@@ -32,6 +33,11 @@ export const ContextProvider = ({ children }) => {
         }
     }
 
+    const toggleTheme = () => {
+        console.log('Theme toggled')
+        setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'))
+    }
+
 
     const [errorState, setErrorState] = useState(error)
 
@@ -43,6 +49,8 @@ export const ContextProvider = ({ children }) => {
         allDentist,
         getAllDentist,
         getDentistById, 
+        theme,
+        toggleTheme,
         error: errorState
     }), [allDentist, errorState])
 

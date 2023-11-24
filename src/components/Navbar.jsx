@@ -25,7 +25,7 @@ const Navbar = () => {
                 </ul>
 
                 {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-                <button onClick={toggleTheme}>Change theme</button>
+                <button style={{cursor: 'pointer'}} onClick={toggleTheme}>Change theme</button>
             </div>
            
         </nav>

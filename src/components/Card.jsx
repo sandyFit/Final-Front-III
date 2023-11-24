@@ -37,7 +37,7 @@ const Card = ({ data, isFavorite }) => {
             <img src='./images/doctor.jpg' alt='doctor avatar' style={{ maxWidth: '100%', height: 'auto' }} />
 
             <Link to={`/dentist/${id}`}>
-                <h3>{name}</h3>
+                <h3 style={{textAlign: 'center'}}>{name}</h3>
             </Link>
             <p>{username}</p>
             <p>{id}</p>

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useContext, useEffect } from 'react'
 import Card from '../components/Card'
 import { ContextGlobal }  from '../utils/global.context'

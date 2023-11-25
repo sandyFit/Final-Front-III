@@ -26,7 +26,8 @@ export const ContextProvider = ({ children }) => {
     const getDentistById = async (id) => {
         try {
             const response = await axios.get(`${BASE_URL}/${id}`)
-            setDentist(response.data[0])
+            console.log(response.data)
+            setDentist(response.data)
         }
         catch (err) {
             setError(err.message)
@@ -48,11 +49,12 @@ export const ContextProvider = ({ children }) => {
     const contextValue = useMemo(() => ({
         allDentist,
         getAllDentist,
+        dentist,
         getDentistById, 
         theme,
         toggleTheme,
         error: errorState
-    }), [allDentist, errorState])
+    }), [allDentist, errorState, toggleTheme])
 
     return (
         <ContextGlobal.Provider value={contextValue}>

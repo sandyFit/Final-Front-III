@@ -6,6 +6,7 @@ import { showAlert } from '../utils/showAlert'
 const Detail = () => {
     const { id } = useParams()
     const { getDentistById, dentist, error } = useContext(ContextGlobal)
+    const { theme } = useContext(ContextGlobal)
 
     useEffect(() => {
         if (error) {
@@ -17,7 +18,7 @@ const Detail = () => {
     }, [id, getDentistById, error])
 
     return (
-        <div>
+        <div className={theme === 'dark' ? 'dark' : ''}>
             {dentist ? (
                 <>
                     <h1>Detail Dentist id: {id}</h1>

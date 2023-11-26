@@ -11,25 +11,25 @@ const Home = () => {
         theme
     } = useContext(ContextGlobal)
 
-    useEffect(() => {
 
-        if (error) {
+    useEffect(() => {
+        if (error)  {
             showAlert(`Error fetching data: ${error}`, 'error')
         }
         else {
             getAllDentist()
         }
-    }, [error, getAllDentist]);
+    }, [error, getAllDentist])
 
 
     return (
-        <main className={theme === 'dark' ? 'dark' : ''}>
+        <main className={ theme === 'dark' ? 'dark' : '' }>
             <h1>Home</h1>   
             
             <div className='card-grid'>
-                {allDentist.length
+                { allDentist.length
                     ? allDentist.map((dentist, index) => <Card key={index} data={dentist} />)
-                    : null}
+                    : null }
             </div>
 
         </main>

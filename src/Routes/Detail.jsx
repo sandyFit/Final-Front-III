@@ -18,10 +18,10 @@ const Detail = () => {
     }, [id, getDentistById, error])
 
     return (
-        <div className={theme === 'dark' ? 'dark' : ''}>
-            {dentist ? (
+        <div className={ theme === 'dark' ? 'dark' : '' }>
+            { dentist ? (
                 <>
-                    <h1>Detail Dentist id: {id}</h1>
+                    <h1>Detail Dentist id: { id }</h1>
                     <table>
                         <thead>
                             <tr>
@@ -33,16 +33,16 @@ const Detail = () => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td>{dentist.name}</td>
-                                <td>{dentist.email}</td>
-                                <td>{dentist.phone}</td>
-                                <td>{dentist.website}</td>
+                                <td>{ dentist.name }</td>
+                                <td>{ dentist.email }</td>
+                                <td>{ dentist.phone }</td>
+                                <td>{ dentist.website }</td>
                             </tr>
                         </tbody>
                     </table>
                 </>
             ) : (
-                <p>{error || 'Loading...'}</p>
+                <p>{ error || 'Loading...' }</p>
             )}
         </div>
     )

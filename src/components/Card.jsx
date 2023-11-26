@@ -1,36 +1,37 @@
-import React from 'react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { showAlert } from '../utils/showAlert'
+import { ContextGlobal } from '../utils/global.context'
+
 
 const Card = ({ data, isFavorite }) => {
+
     const { name, username, id } = data
+    const { favorites, addFavorite } = useContext(ContextGlobal)
 
-    const addFav = () => {
-        if (!isFavorite) {
-            // Add Card to localStorage
-            const favoriteCard = {
-                name,
-                username,
-                id,
-            }
+        const handleFavorite = () => {
+            if (!isFavorite) {
+                const favoriteCard = {
+                    name,
+                    username,
+                    id,
+                }
 
-            // Retrieve existing favorites from localStorage
-            const existingFavorites = JSON.parse(localStorage.getItem('favorites')) || []
+                const isAlreadyFavorite = favorites.some((fav) => fav.id === id)
 
-            // Check if Card is already a favorite
-            const isAlreadyFavorite = existingFavorites.some((fav) => fav.id === id)
-
-            if (!isAlreadyFavorite) {
-                // Add Card to favorites
-                const newFavorites = [...existingFavorites, favoriteCard]
-                localStorage.setItem('favorites', JSON.stringify(newFavorites))
-                showAlert('Card added to favorites!', 'success')
+                if (!isAlreadyFavorite) {
+                    addFavorite(favoriteCard)
+                    showAlert('Card added to favorites!', 'success')
+                }
+                else {
+                    showAlert('Card is already in favorites!', 'warning')
+                }
             }
             else {
-                showAlert('Card is already in favorites!', 'warning')
+                removeFavorite(id)
+                showAlert('Card removed from favorites!', 'info')
             }
         }
-    }
 
     return (
         <div className='card'>
@@ -43,7 +44,7 @@ const Card = ({ data, isFavorite }) => {
             <p>{id}</p>
 
             {!isFavorite && (
-                <button onClick={addFav} className='favButton'>
+                <button onClick={ handleFavorite } className='favButton'>
                     Add fav ⭐
                 </button>
             )}

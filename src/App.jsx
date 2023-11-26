@@ -1,9 +1,7 @@
-import Form from "./components/Form";
+import { Outlet } from "react-router-dom"
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import { ContextProvider } from "./utils/global.context"
-import { Outlet } from "react-router-dom";
-
 
 
 
@@ -14,7 +12,6 @@ function App() {
         <Navbar />
         <Outlet />
         <Footer />
-        <Form />
       </ContextProvider>
       
     </div>

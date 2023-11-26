@@ -12,8 +12,7 @@ function App() {
         <Navbar />
         <Outlet />
         <Footer />
-      </ContextProvider>
-      
+      </ContextProvider> 
     </div>
   );
 }

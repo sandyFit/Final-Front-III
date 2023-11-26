@@ -66,6 +66,17 @@ export const ContextProvider = ({ children }) => {
         localStorage.setItem('favorites', JSON.stringify(newFavorites))
     }
 
+    const removeFavorite = (id) => {
+        dispatch({
+            type: 'REMOVE_FAVORITE',
+            payload: id
+        })
+
+        const existingFavorites = JSON.parse(localStorage.getItem('favorites')) || []
+        const newFavorites = existingFavorites.filter((fav) => fav.id !== id)
+        localStorage.setItem('favorite', JSON.stringify(newFavorites))
+    }
+
     const toggleTheme = () => {
         console.log('Theme toggled')
         dispatch({
@@ -83,6 +94,7 @@ export const ContextProvider = ({ children }) => {
         toggleTheme,
         favorites,
         addFavorite,
+        removeFavorite,
         error
     }
 

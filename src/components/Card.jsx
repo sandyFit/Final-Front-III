@@ -7,7 +7,7 @@ import { ContextGlobal } from '../utils/global.context'
 const Card = ({ data, isFavorite }) => {
 
     const { name, username, id } = data
-    const { favorites, addFavorite } = useContext(ContextGlobal)
+    const { favorites, addFavorite, removeFavorite } = useContext(ContextGlobal)
 
         const handleFavorite = () => {
             if (!isFavorite) {
@@ -38,16 +38,14 @@ const Card = ({ data, isFavorite }) => {
             <img src='./images/doctor.jpg' alt='doctor avatar' style={{ maxWidth: '100%', height: 'auto' }} />
 
             <Link to={`/dentist/${id}`}>
-                <h3 style={{textAlign: 'center'}}>{name}</h3>
+                <h3 style={{ textAlign: 'center' }}>{ name }</h3>
             </Link>
-            <p>{username}</p>
-            <p>{id}</p>
+            <p>{ username }</p>
+            <p>{ id }</p>
 
-            {!isFavorite && (
-                <button onClick={ handleFavorite } className='favButton'>
-                    Add fav ⭐
-                </button>
-            )}
+            <button onClick={ handleFavorite } className='favButton'>
+                { isFavorite ? 'Remove fav 🗑️' : 'Add fav ⭐' }
+            </button>
         </div>
     )
 }

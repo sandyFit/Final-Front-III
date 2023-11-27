@@ -6,22 +6,18 @@ import { ContextGlobal } from '../utils/global.context'
 
 const Favs = () => {
 
-    // Change theme
-    const { theme } = useContext(ContextGlobal)
-
-    // Retrieve favorites from localStorage
-    const favorites = JSON.parse(localStorage.getItem('favorites')) || []
+    const { theme, favorites } = useContext(ContextGlobal)
 
     return (
         <div className={ theme === 'dark' ? 'dark' : ''} >
             <h1>Dentists Favs</h1>
             <div className='card-grid'>
                 { favorites.length > 0 ? (
-                    favorites.map(favorite => (
+                    favorites.map((favorite) => (
                         <Card key={ favorite.id } data={ favorite } isFavorite={ true } />
                     ))
                 ) : (
-                    <p>No favorite dentists found.</p>
+                    <h2>No favorite dentists found.</h2>
                 )}
             </div>
         </div >

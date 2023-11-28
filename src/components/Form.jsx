@@ -13,7 +13,6 @@ const Form = () => {
   const [state_1, setState_1] = useState("");
   const [state_2, setState_2] = useState("");
 
-  // eslint-disable-next-line no-unused-vars
   const [stateMessage, setMessage] = useState("");
 
   const handleChange_1 = (e) => {
@@ -46,13 +45,24 @@ const Form = () => {
     <div className = 'Form__div'>
       <form className = 'div__form'>
         <div>
-          <input onChange = {handleChange_1} className = {`${state_1 ? "has-value" : ""}`} id = "name" type="text" value={state_1} placeholder="Your Name"
-                  required/>
+          <input onChange={handleChange_1}
+            className={`${state_1 ? "has-value" : ""}`}
+            id="name"
+            type="text"
+            value={state_1}
+            placeholder="Your Name"
+            required
+          />
         </div>
 
         <div>
-          <input onChange = {handleChange_2} className = {`${state_2 ? "has-value" : ""}`} id = "email" type="email" placeholder="Your Email"
-                  required/>
+          <input onChange={handleChange_2}
+            className={`${state_2 ? "has-value" : ""}`}
+            id="email"
+            type="email"
+            placeholder="Your Email"
+            required
+          />
         </div>
         
         <button onClick = {handleSubmit} typeof = 'submit'>

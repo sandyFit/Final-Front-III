@@ -1,6 +1,10 @@
 import React, { useContext } from 'react'
 import { ContextGlobal } from '../utils/global.context'
 import '../assets/footer.css'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
+import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 
 const Footer = () => {
 
@@ -14,10 +18,11 @@ const Footer = () => {
             </div>
 
             <div className="socials">
-                <img className='social-icon' src="./images/ico-facebook.png" alt="facebook icon" />
-                <img className='social-icon' src="./images/ico-instagram.png" alt="instagram icon" />
-                <img className='social-icon' src="./images/ico-tiktok.png" alt="tiktok icon" />
-                <img className='social-icon' src="./images/ico-whatsapp.png" alt="whatsapp icon" />
+                <FacebookIcon style={{ fontSize: 40 }} />
+                <InstagramIcon style={{ fontSize: 40 }} />
+                <LinkedInIcon style={{ fontSize: 40 }} />
+                <WhatsAppIcon style={{ fontSize: 40 }} />
+                
             </div>
             
         </footer>

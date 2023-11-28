@@ -13,7 +13,7 @@ const Contact = () => {
     return (
         <div className={theme === 'dark' ? 'dark' : ''}>
             <div className='contact-box'>
-                <h2>Want to know more?</h2>
+                <h1>Want to know more?</h1>
                 <p>Send us your questions and we will contact you</p>
                 <Form />
             </div>

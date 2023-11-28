@@ -23,7 +23,7 @@ const Detail = () => {
             <div style={{ height: '50vh', padding: '2rem 6rem 0' }}>
                 { dentist ? (
                     <>
-                        <h1>Detail Dentist id: { id }</h1>
+                        <h1>Meet Dr. N° { id }</h1>
                         <table>
                             <thead>
                                 <tr>

@@ -25,7 +25,7 @@ const Home = () => {
     return (
         <main className={theme === 'dark' ? 'dark' : ''}>
             <div style={{ padding: '.2rem 0 3rem' }}>
-                <h1>Home</h1>   
+                <h1>Our Dentists</h1>   
                 
                 <div className='card-grid'>
                     { allDentist.length

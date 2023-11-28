@@ -20,8 +20,8 @@ const Navbar = () => {
             <div className="links">
                 <ul>
                     <Link to='/'>Home</Link>
+                    <Link to='/favs'>Favs</Link>
                     <Link to='/contacto'>Contact</Link>
-                    <Link to='/favs'>Fav</Link>
                 </ul>
 
                 <button onClick={toggleTheme}>

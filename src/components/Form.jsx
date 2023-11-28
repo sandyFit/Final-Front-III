@@ -1,10 +1,9 @@
-/* eslint-disable react/no-unknown-property */
 
-// eslint-disable-next-line no-unused-vars
 import React from 'react'
   // Hooks
 import { useState } from 'react'
-import { showAlert } from '../utils/showAlert';
+import { showAlert } from '../utils/showAlert'
+import '../assets/form.css'
 
 
 // Component

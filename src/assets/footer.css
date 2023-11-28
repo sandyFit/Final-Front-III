@@ -5,7 +5,7 @@ footer {
     padding: 2rem;
     position: relative;
     bottom: 0;
-    border-top: 4rem solid crimson;
+    border-top: 4rem solid rgb(167, 82, 247);
 }
 
 footer img {
@@ -28,4 +28,8 @@ footer>p {
 .social-icon {
     width: 2rem;
     height: 2rem;
+}
+ 
+.copyright {
+    margin-top: 2rem;
 }

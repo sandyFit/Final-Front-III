@@ -4,6 +4,7 @@ nav {
     justify-content: space-around;
     padding: 1rem 0;
     background-color: #f4f3f3;
+    border-bottom: 1px solid #f4f3f3;
 }
 
 .logo {
@@ -12,11 +13,12 @@ nav {
     align-items: center;
     font-size: 1.2rem;
     font-weight: 500;
+    padding-right: 18rem;
 }
 
 span {
-    color: crimson;
-    font-weight: 600;
+    color: rgb(115, 31, 194);
+    font-weight: 700;
 }
 
 .links {
@@ -33,4 +35,18 @@ a {
 
 a:hover {
     color: rgb(136, 136, 136);
+}
+
+nav button {
+    width: 4rem;
+    height: 4rem;
+    color: rgb(248, 219, 53);
+    background-color: rgb(153, 54, 246);
+    border: 2px solid #f4f3f3;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: rgb(167, 82, 247);
 }

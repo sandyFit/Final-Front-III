@@ -2,10 +2,12 @@
 import React, { useContext } from 'react'
 import { ContextGlobal } from '../utils/global.context'
 import '../assets/footer.css'
+import FavoriteIcon from '@mui/icons-material/Favorite'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
+
 
 const Footer = () => {
 
@@ -16,6 +18,13 @@ const Footer = () => {
             <div className="logo-box">
                 <p>Powered by</p>
                 <img src='./images/DH.png' alt='DH-logo' />               
+            </div>
+
+            <div className="copyright">
+                <p>
+                    Made with <FavoriteIcon style={{ fontSize: 16, color: 'crimson'}} /> by Sandra Ramos & Andrea Romero
+
+                </p>
             </div>
 
             <div className="socials">

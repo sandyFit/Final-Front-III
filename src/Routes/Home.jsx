@@ -23,15 +23,16 @@ const Home = () => {
 
 
     return (
-        <main className={ theme === 'dark' ? 'dark' : '' }>
-            <h1>Home</h1>   
-            
-            <div className='card-grid'>
-                { allDentist.length
-                    ? allDentist.map((dentist, index) => <Card key={index} data={dentist} />)
-                    : null }
+        <main className={theme === 'dark' ? 'dark' : ''}>
+            <div style={{ padding: '.2rem 0 3rem' }}>
+                <h1>Home</h1>   
+                
+                <div className='card-grid'>
+                    { allDentist.length
+                        ? allDentist.map((dentist, index) => <Card key={index} data={dentist} />)
+                        : null }
+                </div>
             </div>
-
         </main>
     );
 }

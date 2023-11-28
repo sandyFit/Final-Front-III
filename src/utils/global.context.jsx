@@ -1,4 +1,4 @@
-import { createContext, useReducer, useCallback } from "react"
+import { createContext, useReducer, useCallback, useEffect } from "react"
 import {reducer} from '../utils/reducer'
 import axios from "axios"
 
@@ -54,28 +54,39 @@ export const ContextProvider = ({ children }) => {
         }
     }, [dispatch])
 
+
     const addFavorite = (favoriteCard) => {
         dispatch({
             type: 'ADD_FAVORITE',
             payload: favoriteCard,
-        })
-    
+        });
+
         // Update localStorage
         const existingFavorites = JSON.parse(localStorage.getItem('favorites')) || []
         const newFavorites = [...existingFavorites, favoriteCard]
         localStorage.setItem('favorites', JSON.stringify(newFavorites))
     }
 
+    useEffect(() => {
+        // Load favorites from local storage on component mount
+        const storedFavorites = JSON.parse(localStorage.getItem('favorites')) || []
+        dispatch({
+            type: 'SET_FAVORITES',
+            payload: storedFavorites,
+        })
+    }, [])
+
     const removeFavorite = (id) => {
         dispatch({
             type: 'REMOVE_FAVORITE',
-            payload: id
-        })
+            payload: id,
+        });
 
         const existingFavorites = JSON.parse(localStorage.getItem('favorites')) || []
         const newFavorites = existingFavorites.filter((fav) => fav.id !== id)
-        localStorage.setItem('favorite', JSON.stringify(newFavorites))
-    }
+        localStorage.setItem('favorites', JSON.stringify(newFavorites))
+    };
+
 
     const toggleTheme = () => {
         console.log('Theme toggled')

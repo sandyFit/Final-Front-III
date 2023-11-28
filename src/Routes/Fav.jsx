@@ -18,6 +18,7 @@ const Favs = () => {
                     ) : (
                         <h2>No favorite dentists found.</h2>
                     )}
+
                 </div>
             </div>
             

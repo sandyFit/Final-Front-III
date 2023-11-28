@@ -125,3 +125,65 @@ tr:nth-child(even) {
 .dark a {
     color: white;
 }
+/*Styles para formulario*/
+
+.Form__div .div__form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.Form__div .div__form div input {
+    font-family: inherit;
+    background-color: white;
+    border: 0.1rem #080808 solid;
+    color: #000000;
+    display: block;
+    margin-top: 1rem;
+    height: 2rem;
+    padding-left: 1.2rem;
+    width: 18rem;
+}
+
+.Form__div .div__form div label {
+    color: #030000;
+    font-size: 0rem;
+    position: absolute;
+    top: 30%;
+    translate: 0 -30%;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+/* Button Style Form*/
+.Form__div button {
+    align-items: center;
+    background-color: #f9f6fd;
+    border-width: 1px;
+    border: 0.1rem #080808 solid;
+    color: #0a0a0a;
+    display: flex;
+    font-size: 1.3rem;
+    height: 2rem;
+    justify-content: space-around;
+    margin-top: 1rem;
+    padding: 0.3rem;
+    transition: all 0.2s;
+    width: 10rem;
+}
+.Form__div button:hover {
+    align-items: center;
+    background-color: rgb(233, 56, 76);
+    border-width: 1px;
+    border: 0.1rem #000000 solid;
+    color: #000000;
+    display: flex;
+    font-size: 1.3rem;
+    height: 2rem;
+    justify-content: space-around;
+    margin-top: 1rem;
+    padding: 0.3rem;
+    transition: all 0.2s;
+    width: 10rem;
+}

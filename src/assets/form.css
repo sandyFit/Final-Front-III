@@ -19,8 +19,8 @@
 
 .Form__div .div__form div input {
     font-family: inherit;
-    background-color: white;
-    border: 0.1rem #080808 solid;
+    background-color: #f4f3f3;
+    border: 0.05rem #080808 solid;
     color: #000000;
     display: block;
     margin-top: 1rem;
@@ -42,11 +42,12 @@
 /* Button Style Form*/
 .Form__div button {
     align-items: center;
-    background-color: aqua;
-    border: 0.1rem #080808 solid;
+    background-color: rgb(148, 252, 252);
+    border: 1px #080808 solid;
     color: #0a0a0a;
     display: flex;
     font-size: 1rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
     height: 2rem;
@@ -55,10 +56,11 @@
     padding: 1.5rem;
     transition: all 0.2s;
     width: 26.8rem;
+    cursor: pointer;
 }
 
 .Form__div button:hover {
     align-items: center;
-    background-color: rgb(25, 222, 222);
-
+    background-color: aqua;
+    letter-spacing: 3px;
 }

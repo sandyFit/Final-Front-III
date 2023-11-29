@@ -35,13 +35,14 @@ const Card = ({ data, isFavorite }) => {
 
     return (
         <div className='card'>
+            <p className='number'>{ id }</p>
             <img src='./images/doctor.jpg' alt='doctor avatar' style={{ maxWidth: '100%', height: 'auto' }} />
 
             <Link to={`/dentist/${id}`}>
-                <h3 style={{ textAlign: 'center' }}>{ name }</h3>
+                <h3 style={{ textAlign: 'center', margin: 0 }}>{ name }</h3>
             </Link>
             <p>{ username }</p>
-            <p>{ id }</p>
+            
 
             <button onClick={ handleFavorite } className='favButton'>
                 { isFavorite ? 'Remove fav 🗑️' : 'Add fav ⭐' }

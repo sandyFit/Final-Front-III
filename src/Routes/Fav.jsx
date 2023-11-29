@@ -8,7 +8,7 @@ const Favs = () => {
 
     return (
         <div className={theme === 'dark' ? 'dark' : ''} >
-            <div style={{padding: '.2rem 0 3rem' }}>
+            <div style={{padding: '1rem 0 3rem' }}>
                 <h1>Your Go-To Dentists</h1>
                 <div className='card-grid'>
                     {favorites.length > 0 ? (

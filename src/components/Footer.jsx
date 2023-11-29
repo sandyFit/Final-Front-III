@@ -17,13 +17,15 @@ const Footer = () => {
         <footer className={theme === 'dark' ? 'dark' : ''}>
             <div className="logo-box">
                 <p>Powered by</p>
-                <img src='./images/DH.png' alt='DH-logo' />               
+                <img
+                    src={theme === 'dark' ? './images/DH-white.png' : './images/DH.png'}
+                    alt={theme === 'dark' ? 'DH-dark-logo' : 'DH-light-logo'}
+                />
             </div>
 
             <div className="copyright">
                 <p>
-                    Made with <FavoriteIcon style={{ fontSize: 16, color: 'crimson'}} /> by Sandra Ramos & Andrea Romero
-
+                    Made with <FavoriteIcon style={{ fontSize: 16, color: 'crimson' }} /> by Sandra Ramos & Andrea Romero
                 </p>
             </div>
 
@@ -32,11 +34,10 @@ const Footer = () => {
                 <InstagramIcon style={{ fontSize: 40 }} />
                 <LinkedInIcon style={{ fontSize: 40 }} />
                 <WhatsAppIcon style={{ fontSize: 40 }} />
-                
             </div>
-            
         </footer>
     )
+
 }
 
 export default Footer

@@ -20,7 +20,7 @@ const Detail = () => {
 
     return (
         <div className={theme === 'dark' ? 'dark' : ''}>
-            <div style={{ height: '50vh', padding: '2rem 6rem 0' }}>
+            <div style={{ height: '51vh', padding: '2rem 6rem 0' }}>
                 { dentist ? (
                     <>
                         <h1>Meet Dr. N° { id }</h1>

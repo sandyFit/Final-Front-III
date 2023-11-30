@@ -1,12 +1,11 @@
-// eslint-disable-next-line no-unused-vars
 import React, { useContext } from 'react'
 import { ContextGlobal } from '../utils/global.context'
-import '../assets/footer.css'
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
+import '../assets/footer.css'
 
 
 const Footer = () => {
@@ -18,7 +17,7 @@ const Footer = () => {
             <div className="logo-box">
                 <p>Powered by</p>
                 <img
-                    src={theme === 'dark' ? './images/DH-white.png' : './images/DH.png'}
+                    src={theme === 'dark' ? '/images/DH-white.png' : '/images/DH.png'}
                     alt={theme === 'dark' ? 'DH-dark-logo' : 'DH-light-logo'}
                 />
             </div>

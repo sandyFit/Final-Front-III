@@ -15,11 +15,13 @@
     "@material-ui/icons": "^4.11.3",
     "@mui/icons-material": "^5.14.18",
     "@mui/material": "^5.14.17",
-    "axios": "^1.6.2",
+    "axios": "^1.7.7",
+    "proyecto-final": "file:",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.0",
     "react-sweetalert2": "^0.5.2",
+    "sweetalert2": "^11.6.13",
     "sweetalert2-react-content": "^5.0.7"
   },
   "devDependencies": {
